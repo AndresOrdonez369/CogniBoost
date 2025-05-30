@@ -1,89 +1,93 @@
-# CogniBoost: Athlete Edition ????
+# CogniBoost: Athlete Edition
 
-¡Bienvenido a CogniBoost: Athlete Edition! Un juego de memoria dinámico y educativo diseñado para desafiar tu agilidad mental y familiarizarte con habilidades cognitivas clave para el rendimiento atlético. Encuentra los pares, supera tu puntuación y aprende sobre el poder del entrenamiento mental.
-## ?? Sobre el Juego
+¡Bienvenido a CogniBoost: Athlete Edition! Un juego de memoria dinámico y educativo diseñado para desafiar tu agilidad mental y familiarizarte con habilidades cognitivas clave para el rendimiento atlético. Encuentra los pares, supera tu puntuación y explora el poder del entrenamiento mental en el deporte.
 
-CogniBoost: Athlete Edition es un clásico juego de encontrar pares con un toque deportivo y educativo. El objetivo es simple: voltea las cartas y encuentra todas las parejas en el menor tiempo y con la menor cantidad de clics posible. A medida que avanzas, no solo pones a prueba tu memoria, sino que también puedes (opcional) aprender sobre la importancia de las habilidades cognitivas en el deporte.
+**Juega la versión WebGL aquí:** [https://andrexr369.itch.io/cogniboost]
+
+## Acerca del Juego
+
+CogniBoost: Athlete Edition es un juego de memoria con un giro deportivo. El objetivo es simple: voltea las cartas y encuentra todas las parejas en el menor tiempo y con la menor cantidad de clics posible. Este proyecto busca no solo entretener, sino también destacar la importancia de las habilidades cognitivas en diversas disciplinas.
 
 ### Características Principales
-*   **Desafío de Memoria Clásico:** La jugabilidad adictiva de encontrar pares que todos conocemos y amamos.
-*   **Niveles de Dificultad:** Elige entre Fácil, Media y Difícil para adaptar el reto a tu habilidad. Cada dificultad carga una configuración de tablero diferente.
-*   **Sistema de Puntuación:** Compite por la mejor puntuación basada en el tiempo, los clics y los pares encontrados.
-*   **Leaderboard Local:** ¡Guarda tus mejores hazañas y sigue mejorando! Incluye un sistema para ingresar tu nombre (estilo arcade).
-*   **Retroalimentación Sonora y Visual:** Efectos de sonido para interacciones clave y efectos de partículas al ganar.
-*   **Interfaz Dinámica:** El tablero de juego y su marco se ajustan al tamaño de la configuración de cartas cargada.
-*   **Construido para WebGL:** Juega directamente en tu navegador.
+*   **Desafío de Memoria Clásico:** Jugabilidad intuitiva y adictiva de encontrar pares.
+*   **Niveles de Dificultad:**
+    *   **Fácil:** Ideal para una introducción rápida.
+    *   **Media:** Un reto equilibrado para jugadores intermedios.
+    *   **Difícil:** Para aquellos que buscan el máximo desafío a su memoria.
+*   **Sistema de Puntuación:** Mide tu rendimiento basado en el tiempo, los clics y los pares encontrados.
+*   **Leaderboard Local:** Guarda tus mejores puntuaciones y compite por superarte. Permite ingresar un nombre de jugador (estilo arcade).
+*   **Retroalimentación Audiovisual:** Efectos de sonido para interacciones clave (selección, par correcto, par incorrecto) y un efecto de partículas al ganar.
+*   **Interfaz Adaptable:** El tablero de juego y su marco se ajustan dinámicamente al número de cartas.
+*   **WebGL:** Juega directamente en tu navegador, sin necesidad de descargas.
 
-## ??? Desarrollo y Tecnologías
+## Desarrollo y Tecnologías
 
-Este proyecto fue desarrollado como parte de [Menciona el propósito, ej: "una prueba técnica para Alternova" o "un proyecto personal para explorar el desarrollo de juegos con Unity"].
+Este proyecto fue desarrollado como parte de [Menciona el propósito, ej: "una prueba técnica para Alternova" o "un proyecto personal de aprendizaje"].
 
-*   **Motor de Juego:** Unity 202X.X.X (Especifica tu versión de Unity)
-*   **Lenguaje de Programación:** C#
-*   **Gestión de Archivos Grandes:** Git LFS (Large File Storage) para manejar assets binarios como texturas y audio.
-*   **UI:** Unity UI con TextMeshPro para textos de alta calidad.
-*   **Datos de Configuración:** Los niveles y la disposición de las cartas se cargan dinámicamente desde archivos JSON.
-*   **Persistencia de Datos:** `PlayerPrefs` para guardar la dificultad seleccionada y un archivo JSON local para el leaderboard.
-*   **Pruebas Unitarias:** Se implementaron pruebas de Edit Mode utilizando el Unity Test Framework (NUnit) para validar la lógica de cálculo de puntaje y la validación de la configuración del juego.
+*   **Motor de Juego:** Unity [Especifica tu versión, ej. 2021.3.15f1]
+*   **Lenguaje:** C#
+*   **Control de Versiones:** Git con Git LFS (Large File Storage) para assets binarios.
+*   **Interfaz de Usuario (UI):** Unity UI, utilizando TextMeshPro para la renderización de texto.
+*   **Configuración de Niveles:** Carga dinámica de la disposición de las cartas desde archivos JSON.
+*   **Persistencia de Datos:**
+    *   `PlayerPrefs` para almacenar la dificultad seleccionada por el usuario.
+    *   Archivo JSON local para el leaderboard de puntuaciones.
+*   **Pruebas Unitarias:** Implementación de pruebas de Edit Mode con el Unity Test Framework (NUnit) para validar:
+    *   Lógica de cálculo de la puntuación (`GameManager.CalculateScore`).
+    *   Validación de la estructura y contenido de los archivos JSON de configuración (`ConfigLoader.IsValidConfig`).
 
-## ?? Estructura del Proyecto y Scripts Clave
+## Estructura del Proyecto y Scripts Clave
 
-El proyecto sigue una estructura organizada para separar responsabilidades:
+El proyecto está organizado para promover la modularidad y la separación de responsabilidades. Los scripts principales incluyen:
 
-*   **`GameManager.cs`**: Orquestador principal del juego. Maneja el estado de la partida, la lógica de selección de cartas, el cálculo de puntuación, el temporizador, la actualización de la UI del juego y la comunicación con otros managers.
-*   **`GridManager.cs`**: Responsable de crear y poblar la grilla de cartas en la UI basándose en la configuración cargada desde el JSON.
-*   **`Card.cs`**: Controla el comportamiento y el estado visual de una carta individual (boca arriba, boca abajo, emparejada).
-*   **`ConfigLoader.cs`**: Encargado de leer y validar los archivos de configuración JSON que definen los tableros de juego.
-*   **`CardTypeSO.cs` y `CardRegistrySO.cs`**: ScriptableObjects para definir los diferentes tipos de cartas (su ID y sprite visual) y un registro para acceder a ellos.
-*   **DTOs (Data Transfer Objects)**: Clases simples como `BlockData.cs`, `GameConfig.cs`, `LeaderboardEntry.cs`, `LeaderboardData.cs`, `ResultsData.cs` para estructurar los datos leídos y guardados en JSON.
-*   **`MainMenuManager.cs`**: Gestiona la navegación y la lógica de la interfaz de usuario del menú principal (Iniciar, Créditos, Salir).
-*   **`DifficultySelector.cs`**: Maneja la lógica de la escena de selección de dificultad, guardando la elección del jugador en `PlayerPrefs`.
-*   **`LeaderboardManager.cs`**: Administra la carga, guardado, adición de entradas y ordenación del leaderboard local.
-*   **`LeaderboardUI.cs` y `LeaderboardRowUI.cs`**: Controlan la presentación visual del leaderboard, instanciando filas según sea necesario.
+*   **`GameManager.cs`**: Orquestador central del juego. Gestiona el estado de la partida, la lógica de selección y emparejamiento de cartas, el temporizador, el cálculo de puntuaciones, la actualización de la UI del juego y la coordinación con otros sistemas.
+*   **`GridManager.cs`**: Responsable de la creación y disposición visual de la grilla de cartas en la UI, basándose en la configuración cargada.
+*   **`Card.cs`**: Define el comportamiento y estado de una carta individual (visible, oculta, emparejada, tipo).
+*   **`ConfigLoader.cs`**: Carga y valida los archivos JSON que definen la configuración de cada nivel/dificultad.
+*   **`CardTypeSO.cs`** y **`CardRegistrySO.cs`**: ScriptableObjects utilizados para definir los tipos de cartas (ID, sprite) y un registro central para acceder a ellos eficientemente.
+*   **DTOs (Data Transfer Objects)**: Clases como `BlockData.cs` (y `GameConfig.cs` dentro de él), `LeaderboardEntry.cs` (y `LeaderboardData.cs`), y `ResultsData.cs` (y `ResultsWrapper.cs`) para estructurar los datos para la serialización/deserialización JSON.
+*   **`MainMenuManager.cs`**: Gestiona la navegación y la UI de la escena del menú principal.
+*   **`DifficultySelector.cs`**: Maneja la lógica de la escena de selección de dificultad, guardando la elección del jugador.
+*   **`LeaderboardManager.cs`**: Administra la lógica del leaderboard: carga, guardado, adición de nuevas puntuaciones y ordenación.
+*   **`LeaderboardUI.cs`** y **`LeaderboardRowUI.cs`**: Encargados de la presentación visual del leaderboard, incluyendo la instanciación dinámica de filas.
 
-## ?? Flujo del Videojuego
+## Flujo del Videojuego
 
-1.  **Menú Principal:** El jugador es recibido con opciones para Iniciar el juego, ver Créditos o Salir.
-2.  **Selección de Dificultad:** Al presionar "Iniciar", el jugador es llevado a una pantalla para seleccionar la dificultad (Fácil, Media, Difícil).
-3.  **Inicio del Juego:**
-    *   La dificultad seleccionada se guarda en `PlayerPrefs`.
-    *   Se carga la escena del juego.
-    *   El `GameManager` lee la dificultad de `PlayerPrefs` y selecciona el archivo JSON de configuración correspondiente.
-    *   El `ConfigLoader` carga y valida el JSON.
-    *   El `GridManager` crea el tablero de cartas según la configuración.
-    *   El juego comienza: el temporizador corre y la UI de estadísticas se actualiza.
-4.  **Jugabilidad:**
-    *   El jugador selecciona dos cartas.
+1.  **Menú Principal:** El jugador inicia en esta pantalla, con opciones para "Iniciar", "Créditos" (o "¿Quién me creo?"), y "Salir".
+2.  **Selección de Dificultad:** Al seleccionar "Iniciar", se navega a una pantalla donde el jugador elige la dificultad (Fácil, Media, Difícil).
+3.  **Inicio de la Partida:**
+    *   La dificultad elegida se almacena usando `PlayerPrefs`.
+    *   Se carga la escena principal del juego.
+    *   El `GameManager` lee la dificultad desde `PlayerPrefs` y determina qué archivo JSON de configuración usar.
+    *   El `ConfigLoader` procesa este JSON.
+    *   El `GridManager` genera el tablero de cartas.
+    *   Comienza la partida: el temporizador se activa y la UI de estadísticas se muestra.
+4.  **Jugabilidad (Gameplay):**
+    *   El jugador hace clic para voltear dos cartas.
     *   Se reproducen efectos de sonido para la selección.
-    *   Si las cartas forman un par, se marcan como emparejadas, suenan un efecto de éxito y cambian de color.
-    *   Si no forman un par, suenan un efecto de error y se vuelven a ocultar después de un breve instante.
-5.  **Fin del Juego:**
-    *   Cuando todos los pares son encontrados, el juego termina.
+    *   **Par Correcto:** Si las cartas coinciden, se marcan como emparejadas, se reproducen un sonido de éxito y su apariencia cambia (tinte de color).
+    *   **Par Incorrecto:** Si no coinciden, se reproduce un sonido de error y las cartas se vuelven a ocultar tras un breve instante.
+5.  **Fin de la Partida:**
+    *   Al encontrar todos los pares, el juego concluye.
     *   Se activa un efecto de partículas de victoria.
-    *   Se muestra un panel para que el jugador ingrese su nombre (3 caracteres, estilo arcade).
+    *   Aparece un panel para que el jugador ingrese su nombre (limitado, estilo arcade).
 6.  **Leaderboard:**
-    *   El nombre y la puntuación se guardan en el leaderboard local (un archivo JSON).
-    *   Se muestra la pantalla del leaderboard con los mejores puntajes.
-    *   Desde el leaderboard, el jugador puede optar por "Jugar de Nuevo".
+    *   El nombre y la puntuación se registran en el leaderboard local (almacenado en un archivo JSON).
+    *   Se muestra la pantalla del leaderboard con las puntuaciones más altas.
+    *   Se ofrece un botón para "Jugar de Nuevo".
 7.  **Jugar de Nuevo:**
-    *   El `GameManager` reinicia el estado del juego, limpia la grilla y carga la configuración (basada en la última dificultad seleccionada en `PlayerPrefs`) para una nueva partida.
-8.  **Volver al Menú:** Desde la escena del juego, hay una opción para regresar a la escena del menú principal/selección de dificultad.
+    *   El `GameManager` reinicia el juego, limpiando el tablero y recargando la configuración basada en la última dificultad seleccionada (leída de `PlayerPrefs`).
+8.  **Volver al Menú:** Durante la partida, existe una opción para regresar a la escena de selección de dificultad/menú principal.
 
-## ?? Cómo Ejecutar el Proyecto
+## Cómo Ejecutar el Proyecto
 
-1.  Clona este repositorio.
-2.  Asegúrate de tener Git LFS instalado (`git lfs install` una vez por máquina).
-3.  Abre el proyecto con Unity Hub usando la versión de Unity [Especifica tu versión, ej. 2021.3.15f1].
-4.  Abre la escena del menú principal (ej. `MainMenuScene.unity`) y presiona Play.
-    *O abre la escena del juego directamente (ej. `MemoryGameScene.unity`) si quieres probar esa parte. Se cargará una dificultad por defecto si no se ha seleccionado una previamente.*
+1.  Clona este repositorio: `git clone [https://github.com/AndresOrdonez369/CogniBoost]`
+2.  Asegúrate de tener Git LFS instalado. Si es la primera vez, ejecuta `git lfs install` en tu terminal. Al clonar un repositorio que ya usa LFS, los archivos LFS deberían descargarse automáticamente.
+3.  Abre el proyecto con Unity Hub, usando la versión de Unity **
+4.  La escena inicial debería ser la del menú principal (ej. `MainMenuScene.unity`). Ábrela y presiona el botón "Play" en el editor de Unity.
+    
+## Contribuciones
 
-## ?? Contribuciones
+Este proyecto fue desarrollado como parte de una prueba técnica. Actualmente, no se buscan contribuciones externas de forma activa. Sin embargo, si tienes alguna sugerencia o encuentras algún error, siéntete libre de abrir un "Issue" en la pestaña correspondiente de este repositorio de GitHub.
 
-Este proyecto fue desarrollado como [menciona el propósito]. Si bien no se buscan activamente contribuciones externas en este momento, si encuentras algún error o tienes sugerencias, ¡no dudes en abrir un "Issue" en este repositorio!
-
-**Para contribuir (si el proyecto fuera abierto):**
-1.  Haz un Fork del proyecto.
-2.  Crea tu Feature Branch (`git checkout -b feature/AmazingFeature`).
-3.  Haz Commit de tus cambios (`git commit -m 'Add some AmazingFeature'`).
-4.  Haz Push a la Branch (`git push origin feature/AmazingFeature`).
-5.  Abre un Pull Request.
+---
