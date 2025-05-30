@@ -1,10 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
-// System.Linq no se usa directamente en este script después de la pulida,
-// pero no daña si se mantiene por si se añade alguna funcionalidad que lo requiera.
-// Si quieres ser estricto, podrías eliminarlo. Por ahora lo dejaré.
-using System.Linq;
+
 
 public class ConfigLoader
 {
@@ -39,7 +36,7 @@ public class ConfigLoader
         return gameConfig;
     }
 
-    private bool IsValidConfig(GameConfig config, CardRegistrySO cardRegistry)
+    public bool IsValidConfig(GameConfig config, CardRegistrySO cardRegistry)
     {
         if (config == null)
         {

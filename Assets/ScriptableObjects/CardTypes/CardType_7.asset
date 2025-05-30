@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CardType_7
   m_EditorClassIdentifier: 
   id: 7
-  faceSprite: {fileID: 21300000, guid: 881aecb8ec2403a4fa97ab2320415b5d, type: 3}
+  faceSprite: {fileID: 21300000, guid: 218c5ee4904c6c94485c66d6d434caa5, type: 3}

@@ -420,7 +420,7 @@ public class GameManager : MonoBehaviour
      }*/
 
     // Calcula el puntaje basado en tiempo, clics y pares.
-    private int CalculateScore(float time, int clicks, int pairs)
+    public static int CalculateScore(float time, int clicks, int pairs)
     {
         int score = (pairs * 1000) - (int)(time * 5) - (clicks * 10);
         return Mathf.Max(0, score); // Prevenir puntaje negativo.

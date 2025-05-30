@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardBackImage: {fileID: 6538256288968278595}
   cardFaceImage: {fileID: 8922227999416931998}
+  matchedTintColor: {r: 0.7647059, g: 0.99607843, b: 1, a: 1}
 --- !u!114 &6916552312320126302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9e6f3b7f50f7716488ba2b3bd7d0f753, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c3c023abbeb4fa43ab97e4abff89cd8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

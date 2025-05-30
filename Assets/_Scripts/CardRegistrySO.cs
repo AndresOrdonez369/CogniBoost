@@ -9,45 +9,53 @@ public class CardRegistrySO : ScriptableObject
     public List<CardTypeSO> cardTypes;
 
     private Dictionary<int, CardTypeSO> _typeLookup;
+    private bool _isLookupInitialized = false; // Flag para saber si ya se inicializó
 
-    
-    private void OnEnable()
+    /*private void OnEnable()
     {
         InitializeLookup();
     }
-
-    public void InitializeLookup() // Puede ser llamado explícitamente si es necesario
+*/
+    public void InitializeLookup()
     {
-        if (cardTypes == null)
+        if (_typeLookup == null)
         {
             _typeLookup = new Dictionary<int, CardTypeSO>();
-            Debug.LogError("CardRegistrySO: 'cardTypes' list is null!");
+        }
+        else
+        {
+            _typeLookup.Clear(); // Limpiar por si se llama de nuevo
+        }
+
+        if (cardTypes == null || cardTypes.Count == 0)
+        {
+            Debug.LogWarning("CardRegistrySO: 'cardTypes' list is null or empty during InitializeLookup. Lookup will be empty.");
+            _isLookupInitialized = true; // Marcar como inicializado, aunque vacío
             return;
         }
 
-        // Filtrar nulos antes de crear el diccionario para evitar errores
         var validCardTypes = cardTypes.Where(ct => ct != null).ToList();
-
-        // Comprobar IDs duplicados
-        var duplicateIds = validCardTypes.GroupBy(ct => ct.id)
-                                   .Where(g => g.Count() > 1)
-                                   .Select(g => g.Key);
-        foreach (var id in duplicateIds)
+        if (validCardTypes.Count != cardTypes.Count)
         {
-            Debug.LogError($"CardRegistrySO: Duplicate CardTypeSO ID '{id}' found. IDs must be unique.");
+             Debug.LogWarning("CardRegistrySO: Some CardTypeSO entries in the 'cardTypes' list were null and have been ignored.");
         }
 
-        // Si hay duplicados, es mejor no inicializar o manejarlo de alguna formaa.
-        // Por simplicidad, aquí se toma el primero que encuentre con un ID.
+        // Comprobar IDs duplicados en los CardTypeSO válidos
+        var duplicateIdGroups = validCardTypes.GroupBy(ct => ct.id).Where(g => g.Count() > 1);
+        foreach (var group in duplicateIdGroups)
+        {
+            Debug.LogError($"CardRegistrySO: Duplicate CardTypeSO ID '{group.Key}' found. IDs must be unique. Occurrences: {group.Count()}");
+        }
+
+        // Crear el diccionario, tomando el primer CardTypeSO si hay IDs duplicados (aunque ya se logueó el error)
         _typeLookup = validCardTypes
             .GroupBy(ct => ct.id)
             .ToDictionary(g => g.Key, g => g.First());
 
-        if (validCardTypes.Count != cardTypes.Count)
-        {
-            Debug.LogWarning("CardRegistrySO: Some CardTypeSO entries in the list were null and have been ignored.");
-        }
+        _isLookupInitialized = true; // Marcar que el lookup se ha intentado inicializar
+        // Debug.Log("CardRegistrySO: Lookup initialized with " + _typeLookup.Count + " entries.");
     }
+    
 
     public CardTypeSO GetCardTypeById(int id)
     {
