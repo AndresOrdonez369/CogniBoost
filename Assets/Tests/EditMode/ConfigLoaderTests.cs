@@ -1,9 +1,8 @@
-// ConfigLoaderTests.cs
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.TestTools; 
+using UnityEngine.TestTools;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
+using System.Text.RegularExpressions; 
 
 public class ConfigLoaderTests
 {
@@ -31,12 +30,15 @@ public class ConfigLoaderTests
     [TearDown]
     public void TeardownAfterEachTest()
     {
-        Object.DestroyImmediate(_mockRegistry);
-        foreach (var ct in _mockCardTypesList)
+        if (_mockRegistry != null) Object.DestroyImmediate(_mockRegistry);
+        if (_mockCardTypesList != null)
         {
-            Object.DestroyImmediate(ct);
+            foreach (var ct in _mockCardTypesList)
+            {
+                if (ct != null) Object.DestroyImmediate(ct);
+            }
+            _mockCardTypesList.Clear();
         }
-        _mockCardTypesList.Clear();
         _loader = null;
     }
 
@@ -50,6 +52,7 @@ public class ConfigLoaderTests
                 new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 1, C = 2, number = 1 }
             }
         };
+        // No se espera LogError para una config válida
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsTrue(isValid, "Una configuración 2x2 válida debería ser reconocida como válida.");
     }
@@ -64,7 +67,7 @@ public class ConfigLoaderTests
                 new BlockData { R = 2, C = 1, number = 0 }
             }
         };
-        LogAssert.Expect(LogType.Error, new Regex("Number of blocks is .* odd"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Odd number of blocks \\(3\\)\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con número impar de bloques debería ser inválida.");
     }
@@ -79,7 +82,7 @@ public class ConfigLoaderTests
                 new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 1, C = 2, number = 5 }
             }
         };
-        LogAssert.Expect(LogType.Error, new Regex("does not correspond to any registered CardTypeSO"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Block number 5 \\(R:2,C:2\\) not in registry\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con un 'number' no registrado debería ser inválida.");
     }
@@ -94,7 +97,10 @@ public class ConfigLoaderTests
                 new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 1, C = 2, number = 2 }  // Solo un 2
             }
         };
-        LogAssert.Expect(LogType.Error, new Regex("CardType ID .* appears 1 times"));
+        // El error puede ser para el ID 1 o el ID 2, dependiendo del orden del diccionario.
+        // Usamos una Regex que cubra ambos o aceptamos el primero que falle.
+        // Si el ID 1 falla primero:
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: CardType ID (1|2) appears 1 times\\. Must be 2\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración donde un 'number' aparece solo una vez debería ser inválida.");
     }
@@ -102,30 +108,17 @@ public class ConfigLoaderTests
     [Test]
     public void IsValidConfig_WithNumberAppearingThrice_ReturnsFalse()
     {
-        GameConfig configThrice = new GameConfig
-        {
-            blocks = new BlockData[] {
-                new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 1, C = 2, number = 0 },
-                new BlockData { R = 1, C = 3, number = 0 }, // Tres 0s
-                new BlockData { R = 2, C = 1, number = 1 }, new BlockData { R = 2, C = 2, number = 1 }, // Dos 1s para paridad de bloques
-                new BlockData { R = 2, C = 3, number = 2 }  // Placeholder, para que no falle por "aparece una vez"
-            }
-        };
-        // Necesitamos asegurar que el número total de bloques sea par, y que otro número no falle primero.
-        // Mejor crear un config donde un número aparece 3 veces y otro 1 vez, lo cual fallará por el de 1 vez
-        // o por el de 3 veces. La prueba de arriba ya cubre el de 1 vez.
-        // Re-enfocando: Si un número aparece 3 veces, otro DEBE aparecer un número impar de veces también.
-        // La validación "Each ID must appear exactly twice" es la que saltará.
         GameConfig configActualThrice = new GameConfig
         {
-            blocks = new BlockData[] { // Total 4 bloques.
-                new BlockData { R = 1, C = 1, number = 0 }, // 0 aparece 3 veces
+            blocks = new BlockData[] {
+                new BlockData { R = 1, C = 1, number = 0 },
                 new BlockData { R = 1, C = 2, number = 0 },
-                new BlockData { R = 2, C = 1, number = 0 },
+                new BlockData { R = 2, C = 1, number = 0 }, // 0 aparece 3 veces
                 new BlockData { R = 2, C = 2, number = 1 }  // 1 aparece 1 vez
             }
         };
-        LogAssert.Expect(LogType.Error, new Regex("CardType ID .* appears .* times. Each ID must appear exactly twice"));
+        // El primer error detectado será que el ID 0 aparece 3 veces o que el ID 1 aparece 1 vez.
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: CardType ID (0|1) appears (1|3) times\\. Must be 2\\.$"));
         bool isValid = _loader.IsValidConfig(configActualThrice, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración donde un 'number' no aparece dos veces debería ser inválida.");
     }
@@ -135,11 +128,11 @@ public class ConfigLoaderTests
     {
         GameConfig config = new GameConfig
         {
-            blocks = new BlockData[] { // 1 Fila, 2 Columnas
+            blocks = new BlockData[] {
                 new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 1, C = 2, number = 0 }
             }
         };
-        LogAssert.Expect(LogType.Error, new Regex("Effective grid dimensions .* are out of bounds"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Grid dimensions \\(R:1,C:2\\) out of 2-8 bounds\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con menos de 2 filas debería ser inválida.");
     }
@@ -149,11 +142,11 @@ public class ConfigLoaderTests
     {
         GameConfig config = new GameConfig
         {
-            blocks = new BlockData[] { // 2 Filas, 1 Columna
+            blocks = new BlockData[] {
                 new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 2, C = 1, number = 0 }
             }
         };
-        LogAssert.Expect(LogType.Error, new Regex("Effective grid dimensions .* are out of bounds"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Grid dimensions \\(R:2,C:1\\) out of 2-8 bounds\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con menos de 2 columnas debería ser inválida.");
     }
@@ -163,12 +156,12 @@ public class ConfigLoaderTests
     {
         var blocks = new List<BlockData>();
         for (int r = 1; r <= 9; r++)
-        { // 9 filas
+        {
             blocks.Add(new BlockData { R = r, C = 1, number = (r - 1) % _mockCardTypesList.Count });
             blocks.Add(new BlockData { R = r, C = 2, number = (r - 1) % _mockCardTypesList.Count });
         }
         GameConfig config = new GameConfig { blocks = blocks.ToArray() };
-        LogAssert.Expect(LogType.Error, new Regex("Effective grid dimensions .* are out of bounds"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Grid dimensions \\(R:9,C:2\\) out of 2-8 bounds\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con más de 8 filas debería ser inválida.");
     }
@@ -180,10 +173,10 @@ public class ConfigLoaderTests
         {
             blocks = new BlockData[] {
                 new BlockData { R = 2, C = 1, number = 0 }, new BlockData { R = 2, C = 2, number = 1 },
-                new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 2, C = 1, number = 1 } // Pos (2,1) duplicada
+                new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 2, C = 1, number = 1 }
             }
         };
-        LogAssert.Expect(LogType.Error, new Regex("Duplicate position .* found in config"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Duplicate position \\(R:2,C:1\\)\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con posiciones (R,C) duplicadas debería ser inválida.");
     }
@@ -191,7 +184,7 @@ public class ConfigLoaderTests
     [Test]
     public void IsValidConfig_ConfigIsNull_ReturnsFalse()
     {
-        LogAssert.Expect(LogType.Error, new Regex("GameConfig object is null"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Config object is null\\.$"));
         bool isValid = _loader.IsValidConfig(null, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración nula debería ser inválida.");
     }
@@ -200,7 +193,7 @@ public class ConfigLoaderTests
     public void IsValidConfig_BlocksArrayIsNull_ReturnsFalse()
     {
         GameConfig config = new GameConfig { blocks = null };
-        LogAssert.Expect(LogType.Error, new Regex("GameConfig.blocks array is null"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Config.blocks array is null\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con array de bloques nulo debería ser inválida.");
     }
@@ -209,7 +202,7 @@ public class ConfigLoaderTests
     public void IsValidConfig_BlocksArrayIsEmpty_ReturnsFalse()
     {
         GameConfig config = new GameConfig { blocks = new BlockData[0] };
-        LogAssert.Expect(LogType.Error, new Regex("config.blocks array is empty"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Config.blocks is empty\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con array de bloques vacío debería ser inválida.");
     }
@@ -224,7 +217,7 @@ public class ConfigLoaderTests
                 new BlockData { R = 1, C = 1, number = 0 }, new BlockData { R = 1, C = 2, number = 1 }
             }
         };
-        LogAssert.Expect(LogType.Error, new Regex("Found a null entry within the config.blocks array"));
+        LogAssert.Expect(LogType.Error, new Regex("^Validation: Null block entry found\\.$"));
         bool isValid = _loader.IsValidConfig(config, _mockRegistry);
         Assert.IsFalse(isValid, "Configuración con una entrada de bloque nula debería ser inválida.");
     }

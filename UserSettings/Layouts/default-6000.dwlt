@@ -14,17 +14,92 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 2568
-    y: 99
-    width: 2544
-    height: 1333
-  m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
-  m_MaxSize: {x: 10000, y: 10000}
+    x: 3099
+    y: 494
+    width: 530
+    height: 578
+  m_ShowMode: 0
+  m_Title: Test Runner
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 50, y: 76}
+  m_MaxSize: {x: 4000, y: 4026}
   m_Maximized: 0
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 43
+    width: 2560
+    height: 1349
+  m_ShowMode: 4
+  m_Title: Project
+  m_RootView: {fileID: 5}
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 530
+    height: 578
+  m_MinSize: {x: 50, y: 76}
+  m_MaxSize: {x: 4000, y: 4026}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 530
+    height: 578
+  m_MinSize: {x: 50, y: 76}
+  m_MaxSize: {x: 4000, y: 4026}
+  vertical: 0
+  controlID: 4421
+  draggingID: 0
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,22 +112,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
-  - {fileID: 5}
-  - {fileID: 4}
+  - {fileID: 6}
+  - {fileID: 8}
+  - {fileID: 7}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2544
-    height: 1333
+    width: 2560
+    height: 1349
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 36
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &3
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,12 +144,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2544
+    width: 2560
     height: 36
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &4
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,12 +165,12 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1313
-    width: 2544
+    y: 1329
+    width: 2560
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &5
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,21 +183,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 10}
-  - {fileID: 11}
+  - {fileID: 9}
+  - {fileID: 13}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 36
-    width: 2544
-    height: 1277
+    width: 2560
+    height: 1293
   m_MinSize: {x: 300, y: 150}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 1
-  controlID: 37
+  controlID: 61
   draggingID: 0
---- !u!114 &6
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,21 +210,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 8}
-  - {fileID: 9}
+  - {fileID: 10}
+  - {fileID: 11}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2544
-    height: 414
+    width: 2560
+    height: 251
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 38
+  controlID: 62
   draggingID: 0
---- !u!114 &7
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,16 +241,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 752
-    height: 414
+    width: 756
+    height: 251
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 12}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &8
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,19 +265,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 752
+    x: 756
     y: 0
-    width: 1420
-    height: 414
+    width: 1204
+    height: 251
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 13}
-  - {fileID: 14}
+  - {fileID: 18}
+  - {fileID: 19}
+  - {fileID: 16}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &9
+  m_LastSelected: 2
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,20 +293,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2172
+    x: 1960
     y: 0
-    width: 372
-    height: 414
+    width: 600
+    height: 251
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 16}
-  - {fileID: 17}
+  - {fileID: 20}
+  - {fileID: 21}
+  - {fileID: 22}
   m_Selected: 1
   m_LastSelected: 0
---- !u!114 &10
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,17 +322,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 414
-    width: 2544
-    height: 385
+    y: 251
+    width: 2560
+    height: 600
   m_MinSize: {x: 230, y: 276}
   m_MaxSize: {x: 10000, y: 10026}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &11
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,18 +348,1063 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 799
-    width: 2544
-    height: 478
+    y: 851
+    width: 2560
+    height: 442
   m_MinSize: {x: 100, y: 126}
   m_MaxSize: {x: 4000, y: 4026}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 25}
   m_Panes:
-  - {fileID: 19}
-  - {fileID: 20}
+  - {fileID: 24}
+  - {fileID: 25}
   m_Selected: 1
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: Test framework for running Edit mode and Play mode tests in Unity.
+      Part of the com.unity.test-framework package.
+    m_TextWithWhitespace: "Test Runner\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 26
+    width: 530
+    height: 552
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_Spl:
+    ID: 4452
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 361
+    - 121
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 482
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_TestListGUIs:
+  - m_Window: {fileID: 15}
+    runProgress:
+      RunGuid: 3bb95527-7d84-41ce-90bf-82a78b459f02
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 1
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999998
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[CongniBoost][suite]'
+      name: CongniBoost
+      fullName: CongniBoost
+      resultStatus: 2
+      duration: 0.0350358
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1019
+      uniqueId: '[CogniBoost.EditMode.Tests][C:/Users/andre/CongniBoost/Library/ScriptAssemblies/CogniBoost.EditMode.Tests.dll][suite]'
+      name: CogniBoost.EditMode.Tests.dll
+      fullName: C:/Users/andre/CongniBoost/Library/ScriptAssemblies/CogniBoost.EditMode.Tests.dll
+      resultStatus: 2
+      duration: 0.0350358
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1024
+      parentUniqueId: '[CongniBoost][suite]'
+    - id: 1001
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+      name: ConfigLoaderTests
+      fullName: ConfigLoaderTests
+      resultStatus: 2
+      duration: 0.030903
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: '[CogniBoost.EditMode.Tests][C:/Users/andre/CongniBoost/Library/ScriptAssemblies/CogniBoost.EditMode.Tests.dll][suite]'
+    - id: 1014
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_BlockEntryIsNull_ReturnsFalse]'
+      name: IsValidConfig_BlockEntryIsNull_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_BlockEntryIsNull_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0194483
+      messages: 'Unhandled log message: ''[Error] Validation: Null block entry found.''.
+        Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Null block entry found.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:90)
+
+        ConfigLoaderTests:IsValidConfig_BlockEntryIsNull_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:228)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1013
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_BlocksArrayIsEmpty_ReturnsFalse]'
+      name: IsValidConfig_BlocksArrayIsEmpty_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_BlocksArrayIsEmpty_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0008411
+      messages: 'Unhandled log message: ''[Error] Validation: Config.blocks is empty.''.
+        Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Config.blocks is empty.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:79)
+
+        ConfigLoaderTests:IsValidConfig_BlocksArrayIsEmpty_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:213)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1012
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_BlocksArrayIsNull_ReturnsFalse]'
+      name: IsValidConfig_BlocksArrayIsNull_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_BlocksArrayIsNull_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0007742
+      messages: 'Unhandled log message: ''[Error] Validation: Config.blocks array
+        is null.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Config.blocks array is null.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:78)
+
+        ConfigLoaderTests:IsValidConfig_BlocksArrayIsNull_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:204)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1011
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_ConfigIsNull_ReturnsFalse]'
+      name: IsValidConfig_ConfigIsNull_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_ConfigIsNull_ReturnsFalse
+      resultStatus: 2
+      duration: 0.000616
+      messages: 'Unhandled log message: ''[Error] Validation: Config object is null.''.
+        Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Config object is null.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:77)
+
+        ConfigLoaderTests:IsValidConfig_ConfigIsNull_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:195)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1010
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_DuplicatePositions_ReturnsFalse]'
+      name: IsValidConfig_DuplicatePositions_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_DuplicatePositions_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0009076
+      messages: 'Unhandled log message: ''[Error] Validation: Duplicate position
+        (R:2,C:1).''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Duplicate position (R:2,C:1).
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:100)
+
+        ConfigLoaderTests:IsValidConfig_DuplicatePositions_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:187)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1009
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_GridTooLarge_RowsGreaterThan8_ReturnsFalse]'
+      name: IsValidConfig_GridTooLarge_RowsGreaterThan8_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_GridTooLarge_RowsGreaterThan8_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0010969
+      messages: 'Unhandled log message: ''[Error] Validation: Grid dimensions (R:9,C:2)
+        out of 2-8 bounds.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Grid dimensions (R:9,C:2) out of 2-8 bounds.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:104)
+
+        ConfigLoaderTests:IsValidConfig_GridTooLarge_RowsGreaterThan8_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:172)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1008
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_GridTooSmall_ColsLessThan2_ReturnsFalse]'
+      name: IsValidConfig_GridTooSmall_ColsLessThan2_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_GridTooSmall_ColsLessThan2_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0007039
+      messages: 'Unhandled log message: ''[Error] Validation: Grid dimensions (R:2,C:1)
+        out of 2-8 bounds.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Grid dimensions (R:2,C:1) out of 2-8 bounds.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:104)
+
+        ConfigLoaderTests:IsValidConfig_GridTooSmall_ColsLessThan2_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:157)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1007
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_GridTooSmall_RowsLessThan2_ReturnsFalse]'
+      name: IsValidConfig_GridTooSmall_RowsLessThan2_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_GridTooSmall_RowsLessThan2_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0006924
+      messages: 'Unhandled log message: ''[Error] Validation: Grid dimensions (R:1,C:2)
+        out of 2-8 bounds.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Grid dimensions (R:1,C:2) out of 2-8 bounds.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:104)
+
+        ConfigLoaderTests:IsValidConfig_GridTooSmall_RowsLessThan2_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:143)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1005
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_WithNumberAppearingOnce_ReturnsFalse]'
+      name: IsValidConfig_WithNumberAppearingOnce_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_WithNumberAppearingOnce_ReturnsFalse
+      resultStatus: 1
+      duration: 0.0026518
+      messages: 
+      output: 'Validation: CardType ID 1 appears 1 times. Must be 2.
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1006
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_WithNumberAppearingThrice_ReturnsFalse]'
+      name: IsValidConfig_WithNumberAppearingThrice_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_WithNumberAppearingThrice_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0009379
+      messages: 'Unhandled log message: ''[Error] Validation: CardType ID 0 appears
+        3 times. Must be 2.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: CardType ID 0 appears 3 times. Must be 2.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:107)
+
+        ConfigLoaderTests:IsValidConfig_WithNumberAppearingThrice_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:129)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1004
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_WithNumberNotInRegistry_ReturnsFalse]'
+      name: IsValidConfig_WithNumberNotInRegistry_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_WithNumberNotInRegistry_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0011528
+      messages: 'Unhandled log message: ''[Error] Validation: Block number 5 (R:2,C:2)
+        not in registry.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'CardTypeSO with ID ''5'' not found in registry.
+
+        Validation:
+        Block number 5 (R:2,C:2) not in registry.
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:94)
+
+        ConfigLoaderTests:IsValidConfig_WithNumberNotInRegistry_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:83)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1003
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_WithOddNumberOfBlocks_ReturnsFalse]'
+      name: IsValidConfig_WithOddNumberOfBlocks_ReturnsFalse
+      fullName: ConfigLoaderTests.IsValidConfig_WithOddNumberOfBlocks_ReturnsFalse
+      resultStatus: 2
+      duration: 0.0007051
+      messages: 'Unhandled log message: ''[Error] Validation: Odd number of blocks
+        (3).''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Validation: Odd number of blocks (3).
+
+'
+      stacktrace: 'ConfigLoader:IsValidConfig (GameConfig,CardRegistrySO) (at Assets/_Scripts/ConfigLoader.cs:80)
+
+        ConfigLoaderTests:IsValidConfig_WithOddNumberOfBlocks_ReturnsFalse
+        () (at Assets/Tests/EditMode/ConfigLoaderTests.cs:68)
+
+        System.Reflection.MethodBase:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod
+        (System.Reflection.MethodInfo,object,object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke
+        (object,object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute
+        (NUnit.Framework.Internal.ITestExecutionContext)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1002
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/ConfigLoaderTests/[CogniBoost.EditMode.Tests][ConfigLoaderTests.IsValidConfig_WithValidMinimal2x2Config_ReturnsTrue]'
+      name: IsValidConfig_WithValidMinimal2x2Config_ReturnsTrue
+      fullName: ConfigLoaderTests.IsValidConfig_WithValidMinimal2x2Config_ReturnsTrue
+      resultStatus: 1
+      duration: 0.000375
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][ConfigLoaderTests][suite]'
+    - id: 1015
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][GameManagerScoreTests][suite]'
+      name: GameManagerScoreTests
+      fullName: GameManagerScoreTests
+      resultStatus: 1
+      duration: 0.0041328
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: '[CogniBoost.EditMode.Tests][C:/Users/andre/CongniBoost/Library/ScriptAssemblies/CogniBoost.EditMode.Tests.dll][suite]'
+    - id: 1017
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/GameManagerScoreTests/[CogniBoost.EditMode.Tests][GameManagerScoreTests.CalculateScore_HighPenalties_ReturnsZero]'
+      name: CalculateScore_HighPenalties_ReturnsZero
+      fullName: GameManagerScoreTests.CalculateScore_HighPenalties_ReturnsZero
+      resultStatus: 1
+      duration: 0.0038248
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][GameManagerScoreTests][suite]'
+    - id: 1016
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/GameManagerScoreTests/[CogniBoost.EditMode.Tests][GameManagerScoreTests.CalculateScore_ValidInputs_ReturnsCorrectPositiveScore]'
+      name: CalculateScore_ValidInputs_ReturnsCorrectPositiveScore
+      fullName: GameManagerScoreTests.CalculateScore_ValidInputs_ReturnsCorrectPositiveScore
+      resultStatus: 1
+      duration: 0.0001982
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][GameManagerScoreTests][suite]'
+    - id: 1018
+      uniqueId: 'CogniBoost.EditMode.Tests.dll/GameManagerScoreTests/[CogniBoost.EditMode.Tests][GameManagerScoreTests.CalculateScore_ZeroTimeZeroClicks_ReturnsMaxPairScore]'
+      name: CalculateScore_ZeroTimeZeroClicks_ReturnsMaxPairScore
+      fullName: GameManagerScoreTests.CalculateScore_ZeroTimeZeroClicks_ReturnsMaxPairScore
+      resultStatus: 1
+      duration: 0.0001098
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: 'CogniBoost.EditMode.Tests.dll/[CogniBoost.EditMode.Tests][GameManagerScoreTests][suite]'
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: dbf3c5bbda47e7d2b91c4053ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  - m_Window: {fileID: 0}
+    runProgress:
+      RunGuid: 3bb95527-7d84-41ce-90bf-82a78b459f02
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 1
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999998
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList: []
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories: []
+    m_SelectedOption: 0
+  - m_Window: {fileID: 0}
+    runProgress:
+      RunGuid: 3bb95527-7d84-41ce-90bf-82a78b459f02
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 1
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999998
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList: []
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories: []
+    m_SelectedOption: 0
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Game\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 3316
+    y: 79
+    width: 1202
+    height: 763
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1202, y: 742}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -601
+    m_HBaseRangeMax: 601
+    m_VBaseRangeMin: -371
+    m_VBaseRangeMax: 371
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1202
+      height: 742
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 601, y: 371}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -601
+      y: -371
+      width: 1202
+      height: 742
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1202, y: 763}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+  m_showToolbar: 1
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,8 +1427,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 24
-    width: 751
-    height: 388
+    width: 755
+    height: 225
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -324,7 +1445,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3c51ffff
+      m_ExpandedIDs: 9a5cffff705dffffaedeffffaedfffff5ae1ffffe6e1ffffbef5ffff18fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -341,7 +1462,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 7}
+        m_ClientGUIView: {fileID: 10}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -349,7 +1470,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &13
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,10 +1491,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 753
+    x: 757
     y: 24
-    width: 1418
-    height: 388
+    width: 1202
+    height: 225
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -900,9 +2021,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 926.31683, y: 589.41626, z: -775.4169}
+    m_Target: {x: -1.5250736, y: 1.8387287, z: -8.817555}
     speed: 2
-    m_Value: {x: 926.31683, y: 589.41626, z: -775.4169}
+    m_Value: {x: -1.5250736, y: 1.8387287, z: -8.817555}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -948,13 +2069,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.029640555, y: -0.056953583, z: -0.0016833983, w: 0.99801266}
+    m_Target: {x: 0.11881725, y: 0.14100179, z: -0.01701506, w: 0.9827892}
     speed: 2
-    m_Value: {x: 0.029640557, y: 0.056953587, z: 0.0016833984, w: -0.9980127}
+    m_Value: {x: -0.11881725, y: -0.14100179, z: 0.01701506, w: -0.9827892}
   m_Size:
-    m_Target: 190.77216
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 190.77216
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -975,7 +2096,7 @@ MonoBehaviour:
   m_LastSceneViewRotation: {x: -0.0022563555, y: -0.9595243, z: 0.016886896, w: 0.28152236}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
-    m_SceneView: {fileID: 13}
+    m_SceneView: {fileID: 18}
     m_CameraOverscanSettings:
       m_Opacity: 50
       m_Scale: 1
@@ -988,7 +2109,7 @@ MonoBehaviour:
     name: Contributors / Receivers
     section: Lighting
   m_ViewIsLockedToObject: 0
---- !u!114 &14
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1060,7 +2181,7 @@ MonoBehaviour:
   m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &15
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1081,10 +2202,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Lighting\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 2187
+    x: 4520
     y: 79
-    width: 372
-    height: 795
+    width: 599
+    height: 437
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1096,7 +2217,7 @@ MonoBehaviour:
     m_SaveData: []
     m_ContainerData: []
     m_OverlaysVisible: 1
---- !u!114 &16
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1111,16 +2232,16 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Inspector
+    m_Text: Debug
     m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
-    m_TextWithWhitespace: "Inspector\u200B"
+    m_TextWithWhitespace: "Debug\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 2173
+    x: 1961
     y: 24
-    width: 371
-    height: 388
+    width: 599
+    height: 225
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1141,11 +2262,11 @@ MonoBehaviour:
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
-  m_InspectorMode: 0
+  m_InspectorMode: 1
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &17
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,7 +2302,7 @@ MonoBehaviour:
     m_SaveData: []
     m_ContainerData: []
     m_OverlaysVisible: 1
---- !u!114 &18
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1203,9 +2324,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 438
-    width: 2544
-    height: 359
+    y: 275
+    width: 2560
+    height: 574
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1226,9 +2347,9 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 0
+    m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/_Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1238,16 +2359,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/_Scripts
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\andre\CongniBoost
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 46dd0000
-    m_LastClickedID: 56646
-    m_ExpandedIDs: 0000000070e80000
+    m_SelectedIDs: a2ad0000
+    m_LastClickedID: 44450
+    m_ExpandedIDs: 0000000044ad0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1276,7 +2397,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070e80000
+    m_ExpandedIDs: 0000000044ad0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1322,7 +2443,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1334,7 +2455,7 @@ MonoBehaviour:
     m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 147
---- !u!114 &19
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1400,7 +2521,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 48}
     m_SelectedIDs: fea90000
     m_LastClickedID: 43518
-    m_ExpandedIDs: 0000000070e80000
+    m_ExpandedIDs: 0000000044ad0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1429,7 +2550,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070e80000
+    m_ExpandedIDs: 0000000044ad0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1475,7 +2596,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 14}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1487,7 +2608,7 @@ MonoBehaviour:
     m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 148.5
---- !u!114 &20
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1509,9 +2630,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 823
-    width: 2544
-    height: 452
+    y: 875
+    width: 2560
+    height: 416
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
